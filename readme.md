@@ -12,7 +12,7 @@ Ainsi, avant de commencer cette partie je dois:
 - Nom ✅
 - Date de création ✅
 - Couleur(s)
-- Pays d’origine 
+- Pays d’origine ✅
 - Images ✅
 - Image principale ✅
 - Images supplémentaires
@@ -24,7 +24,7 @@ Ainsi, avant de commencer cette partie je dois:
 
 À rajouter pour la classe/objet "enchère"
 - Période d’activité (Date de début et Date de fin)
-- Prix plancher
+- Prix plancher ✅
 - Offre actuelle
 - Prix (valeur)
 - Nom du membre
