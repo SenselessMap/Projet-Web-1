@@ -8,33 +8,33 @@ Ainsi, avant de commencer cette partie je dois:
 - Bouton pour miser (Dans ce TP, cliquer dessus va rediriger vers le timbre.)
 - Distinction entre les enchères actives et finies 
 
-# À rajouter pour le timbre
--Entité « Timbre »
+À rajouter pour le timbre
+- Entité « Timbre »
 - Nom ✅
-Date de création ✅
-Couleur(s) <span style="color:red">To do</span>
-Pays d’origine
-Images
-Image principale
-Images supplémentaires
-Condition
-Parfaite
-Excellente
-Bonne
-Moyenne
-Endommagé
-Tirage
-Dimensions
-Certifié
-Oui
-Non
-Entité « Enchère »
-Période d’activité
-Date de début
-Date de fin
-Prix plancher
-Offre actuelle
-Prix
-Nom du membre
-Quantité de mises
-Coups de cœur du Lord
+- Date de création ✅
+- Couleur(s) <span style="color:red">To do</span>
+- Pays d’origine
+- Images
+- Image principale
+- Images supplémentaires
+- Condition
+- Parfaite
+- Excellente
+- Bonne
+- Moyenne
+- Endommagé
+- Tirage
+- Dimensions
+- Certifié
+- Oui
+- Non
+- Entité « Enchère »
+- Période d’activité
+- Date de début
+- Date de fin
+- Prix plancher
+- Offre actuelle
+- Prix
+- Nom du membre
+- Quantité de mises
+- Coups de cœur du Lord
