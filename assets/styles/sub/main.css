@@ -1,0 +1,44 @@
+/**
+    CSS de base pour ajuster les différences entre les navigateurs. Il se peut que le css déclaré dans main.css soit recéclarer plus tard dans les autres fichiers.
+*/
+
+body {
+    background-color: var(--vert-principal);
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li, ul {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main {
+    margin: 20px auto 0 auto;
+    width: 95%;
+}
+
+h1 {
+    font-size: var(--front-top);
+    margin-top: 50px;
+    margin-bottom: 40px;
+    cursor:default;
+}
+
+h2, p{
+    font-family: var(--font-alice);
+    margin: 10px 0px 0px;
+    cursor:default;
+}
