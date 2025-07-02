@@ -12,8 +12,8 @@
 .stamp_row {
 	justify-content: center;
 	align-items: center;
-	min-height: 400px;
-	margin-top: 2rem;
+	min-height: 200px;
+	margin: 0;
 }
 
 .formulaire_col {
@@ -21,17 +21,21 @@
 	flex: 0 0 30%;
 	display: flex;
 	flex-direction: column;
-	background-color: var(--vert-fonce);
+	background-color: var(--vert-pale);
 	/*height: 1000px;*/
-	margin-right: 10px;
+	margin-right: 10px; justify-content: center;
 }
 
-.catalogue_col {
+.catalogue_col, .information {
 	flex: 1 1 0;           
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	min-width: 0;
+}
+
+.information {
+	gap:0px;
 }
 
 .catalogue_article, .article_conteneur {
@@ -56,6 +60,7 @@
 
 
 .stamp-price {
+	margin-top: 1rem;
 	cursor: pointer;
 	position: relative;
 	background-color: var(--blanc-gris);
@@ -85,6 +90,14 @@ label {
     font-family: var(--font-alice);
     font-size: var(--font-titre);
     font-variant: normal;
+}
+
+.stamp-description {
+	line-height: 1.5rem;
+}
+
+.information p, .formulaire_col p {
+	font-size: var(--size-texte);
 }
 
 
@@ -176,13 +189,13 @@ label {
 	transform: scaleX(1);
 }
 
-.catalogue_article:hover {
+/*.catalogue_article:hover {
 	animation: montre 0.3s forwards ease-in-out;
 }
 
 .catalogue_article:not(:hover) {
 	animation: cache 0.3s forwards ease-in-out;
-}
+}*/
 
 /* ================================================ Form =================================== */
 
