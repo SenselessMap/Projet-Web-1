@@ -55,6 +55,7 @@
 .catalogue_image {
 	width: 100%;
 	height: auto;
+	cursor: pointer;
 	object-fit: contain;
 }
 
@@ -189,13 +190,35 @@ label {
 	transform: scaleX(1);
 }
 
-/*.catalogue_article:hover {
-	animation: montre 0.3s forwards ease-in-out;
+.image-overlay {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.85);
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
 }
 
-.catalogue_article:not(:hover) {
-	animation: cache 0.3s forwards ease-in-out;
-}*/
+.image-overlay-img {
+	max-width: 90%;
+	max-height: 90%;
+	box-shadow: 0 0 15px #000;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.catalogue_image_mobile {
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
 
 /* ================================================ Form =================================== */
 
@@ -236,4 +259,81 @@ label {
 
 form {
 	margin: 15px;
+}
+
+/* ================================================ Responsive =============================================== */
+
+.burger-checkbox {
+	display: none;
+	margin-bottom: 10px;
+}
+
+.desktop {
+	display: flex;
+}
+
+.mobile {
+	display: none;
+}
+
+
+.nav-liens.mobile li a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+
+.burger-checkbox:checked ~ .nav-liens.mobile {
+	display: flex;
+}
+
+@media screen and (max-width: 768px) {
+	.nav-liens.mobile {
+		display: none; 
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw; 
+		height: 100vh; 
+		background-color: rgba(0, 0, 0, 0.85);
+		flex-direction: column;
+		justify-content: flex-start; 
+		align-items: stretch; 
+		padding-top: 1rem;
+		z-index: 9999;
+		gap: 2rem;
+		overflow-y: auto; 
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.catalogue_row {
+		flex-direction: column;
+	}
+
+	.formulaire_col,
+	.catalogue_col {
+		width: 100%;
+		margin: 0;
+	}
+
+	.catalogue_conteneur_images {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.burger {
+		display: block;
+		cursor: pointer;
+	}
 }

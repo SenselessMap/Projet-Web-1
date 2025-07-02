@@ -13,18 +13,36 @@
         <link href="https://fonts.googleapis.com/css2?family=Alice&family=Limelight&family=Unica+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Unica+One:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     </head>
+    <div id="imageOverlay" class="image-overlay">
+        <img id="overlayImage" class="image-overlay-img" src="" alt="Zoom" />
+    </div>
     <body>
         <header>
             <nav class="nav">
-                <ul class="nav-liens">
-                    <li class="nav-item"><a href="../../index.html">Retour</a></li>
-                    <li class="nav-item"><a href="#">Collections</a></li>
-                    <li class="nav-item"><a href="#">Nouveautés</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="dropdown-toggle">Plus <span class="dropdown-fleche">▾</span></a>
+                <input type="checkbox" id="nav-toggle" class="burger-checkbox" />
+                <label for="nav-toggle" class="burger mobile" aria-label="Toggle menu">☰</label>
+
+                <ul class="nav-liens desktop">
+                    <li class="nav-item desktop"><a href="../../index.html">Retour</a></li>
+                    <li class="nav-item dropdown desktop">
+                        <a href="#" class="dropdown-toggle">Collections <span class="dropdown-fleche">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-menu-item"><a href="#">Contacter</a></li>
-                            <li class="dropdown-menu-item"><a href="#">Histoire</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Histoire du Québec</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Autour du Monde</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Collection Lord Stampy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item desktop"><a href="#">Nouveautés</a></li>
+                </ul>
+                <ul class="nav-liens mobile">
+                    <li class="nav-item mobile"><a href="../../index.html">Retour</a></li>
+                    <li class="nav-item mobile"><a href="#">Nouveautés</a></li>
+                    <li class="nav-item dropdown mobile">
+                        <a href="#" class="dropdown-toggle">Collections <span class="dropdown-fleche">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a href="#">Histoire du Québec</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Autour du Monde</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Collection Lord Stampy</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -39,23 +57,25 @@
                     <p class="stamp-dates">Début de l’enchère : 1 juillet 2025</p>
                     <p class="stamp-dates">Fin de l’enchère : 7 juillet 2025</p>
                     <p class="stamp-current">Offre actuelle : 450$</p>
-                    <br/><br/>
+                    <br class="desktop" /><br/>
                     <p class="stamp-member">Dernière mise par : IWantStamp_1337</p>
                     <br/><br/><div class="bouton">
                         <a href="fiche.html" class="stamp-price btn-miser">Miser</a>    
                     </div>  
+                    <br class="mobile" /><br class="mobile" />
                 </section>
 
                 <section class="catalogue_col">
                     <div class="article_conteneur">
                         <section class="stamp_row"> 
-                            <div class="catalogue_conteneur_images">
-                                <img src="../img/timbres/1.jpg" alt="Timbre rare de 1920" class="catalogue_image" />    
+                            <div class="catalogue_conteneur_images desktop">
+                                <img src="../img/timbres/1.jpg" alt="Timbre rare de 1920" class="catalogue_image" />
                                 <p class="stamp-bids">Nombre de mises : 6</p>                  
                             </div>
                             <article class="catalogue_article">
+                                <img src="../img/timbres/1.jpg" alt="Timbre rare de 1920" class="catalogue_image_mobile mobile" /><br class="mobile" />
                                 <p class="stamp-description">Timbres recouvert du Musée d'Histoire de Québec en 2001. Ce timbre a été retrouvé dans le les sous-sol du Château Frontenac par les employés lors de la rénovation des celliers. Il était pour être affiché au Musée des Civilisations d'Ottawa, mais la pandémie de 2020 a annulé les expositions et ce timbre fait parti de nombreux qui se sont retrouvé aux mains du Lord et d'autres collecteurs.</p>
-                                <section class="stamp_row">
+                                <section class="stamp_row desktop">
                                     <section class="information">
                                         <p class="stamp-start">Prix de départ : 200$</p>
                                         <p class="stamp-condition">Très bonne condition</p>   
@@ -63,6 +83,18 @@
                                         <p class="stamp-origin">Pays d’origine : Canada</p>
                                     </section>
                                     <section class="information">
+                                        <p class="stamp-condition">Condition : Très bonne</p>
+                                        <p class="stamp-certified">Certifié : Oui</p>
+                                        <p class="stamp-colors">Couleurs : Vert bleuté</p>
+                                        <p class="stamp-edition">Histoire du Québec</p>
+                                    </section>
+                                </section>
+                                <section class="stamp_row mobile"><!-- Seulement mobile -->
+                                    <section class="information">
+                                        <p class="stamp-start">Prix de départ : 200$</p>
+                                        <p class="stamp-condition">Très bonne condition</p>   
+                                        <p class="stamp-dimensions">Dimensions : 3.2 x 4.1 cm</p>
+                                        <p class="stamp-origin">Pays d’origine : Canada</p>
                                         <p class="stamp-condition">Condition : Très bonne</p>
                                         <p class="stamp-certified">Certifié : Oui</p>
                                         <p class="stamp-colors">Couleurs : Vert bleuté</p>

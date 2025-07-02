@@ -15,21 +15,35 @@
     </head>
     <body>
         <div id="topBanner" class="top-banner">
-            <p>Cette page est vide, mais le css du main, header, body et footer sont ici. Cliquez sur enchère</p>
+            <p>J'ai corrigé une grande partie de la partie 1. Le lien github a une grande explication du travail.</p>
             <button id="closeBannerBtn" aria-label="Close banner">×</button>
         </div>
         <header>
             <nav class="nav">
-                <!--<div class="nav-logo">Stampy Co.</div>-->
-                <ul class="nav-liens">
-                    <li class="nav-item"><a href="assets/html/catalogue.html">Enchères</a></li>
-                    <li class="nav-item"><a href="#">Collections</a></li>
-                    <li class="nav-item"><a href="#">Nouveautés</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="dropdown-toggle">Plus <span class="dropdown-fleche">▾</span></a>
+                <input type="checkbox" id="nav-toggle" class="burger-checkbox" />
+                <label for="nav-toggle" class="burger mobile" aria-label="Toggle menu">☰</label>
+
+                <ul class="nav-liens desktop">
+                    <li class="nav-item desktop"><a href="assets/html/timbre1.html">Modèle de Timbre</a></li>
+                    <li class="nav-item dropdown desktop">
+                        <a href="#" class="dropdown-toggle">Collections <span class="dropdown-fleche">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-menu-item"><a href="#">Contacter</a></li>
-                            <li class="dropdown-menu-item"><a href="#">Histoire</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Histoire du Québec</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Autour du Monde</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Collection Lord Stampy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item desktop"><a href="#">Nouveautés</a></li>
+                </ul>
+                <ul class="nav-liens mobile">
+                    <li class="nav-item mobile"><a href="../../index.html">Retour</a></li>
+                    <li class="nav-item mobile"><a href="#">Nouveautés</a></li>
+                    <li class="nav-item dropdown mobile">
+                        <a href="#" class="dropdown-toggle">Collections <span class="dropdown-fleche">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu-item"><a href="#">Histoire du Québec</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Autour du Monde</a></li>
+                            <li class="dropdown-menu-item"><a href="#">Collection Lord Stampy</a></li>
                         </ul>
                     </li>
                 </ul>
