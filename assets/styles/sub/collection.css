@@ -1,0 +1,11 @@
+.catalogue_conteneur_images img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: contain;
+    overflow: hidden;
+    display: block;
+}
+
+.stamp_row {
+    min-height: 300px;
+}
