@@ -5,7 +5,7 @@ J'ai découvert un énorme devis qui explique pourquoi ma maquette était aussi 
 Ainsi, avant de commencer cette partie je dois:
 - Filtre FONCTIONNEL. J'en avait mis qui ne fonctionnaient pas, car je pensais que Lord Stampy ne voulais pas de javascript ✅
 - Zoom quand on click sur un timbre ✅
-- Bouton pour miser (Dans ce TP, cliquer dessus va rediriger vers le timbre.)
+- Bouton pour miser (Dans ce TP, cliquer dessus va rediriger vers le timbre.)✅
 - Distinction entre les enchères actives et finies 
 - Mobile ✅
 
@@ -21,7 +21,7 @@ Ainsi, avant de commencer cette partie je dois:
 - Condition (parfaite/excelente/bonne/endommagé) ✅
 - Tirage ✅
 - Dimensions ✅
-- Certifié (oui ou non) 
+- Certifié (fait selon les filtre)
 
 
 À rajouter pour la classe/objet "enchère" 
@@ -31,4 +31,4 @@ Ainsi, avant de commencer cette partie je dois:
 - Prix (valeur) ✅
 - Nom du membre ✅
 - Quantité de mises ✅
-- Coups de cœur du Lord
+- Coups de cœur du Lord ✅
