@@ -1,3 +1,5 @@
+Pour les explications: https://github.com/SenselessMap/LordStampy/tree/master
+
 # Depuis la première remise
 
 J'ai découvert un énorme devis qui explique pourquoi ma maquette était aussi vide. J'ai également réalisé que Lord Stampy n'aime pas le allignement erratique et la composition brisé. J'ai ainsi retiré le code du css qui faisait en sorte que les timbres avaient des hauteurs et margin différents. 
