@@ -7,6 +7,8 @@ Ainsi, avant de commencer cette partie je dois:
 - Zoom quand on click sur un timbre
 - Bouton pour miser (Dans ce TP, cliquer dessus va rediriger vers le timbre.)
 - Distinction entre les enchères actives et finies 
+- Mobile
+
 
 À rajouter pour la classe/objet timbre (✅ = déjà fait)
 - Nom ✅

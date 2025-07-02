@@ -13,6 +13,9 @@
 	flex: 0 0 30%;
 	display: flex;
 	flex-direction: column;
+	background-color: var(--vert-fonce);
+	height: 1000px;
+	margin-right: 10px;
 }
 
 .catalogue_col {
@@ -193,4 +196,8 @@ label {
 .fancy-checkbox:hover span::after,
 .fancy-checkbox input[type="checkbox"]:checked + span::after {
 	transform: scaleX(1);
+}
+
+form {
+	margin: 15px;
 }
