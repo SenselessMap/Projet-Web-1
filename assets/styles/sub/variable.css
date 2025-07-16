@@ -5,16 +5,92 @@
     --vert-de-selection: #375249;
     --beige-principal: #dacc98;
     --blanc-gris: #d7d7d7;
+	--gris-pale-texte: #8b8b8b;
 
     --noir-leger: #2f2f2f;
+	--bleu-stampy: rgb(36, 104, 206);
+	--bleu-stampy-pale: rgb(98, 147, 219);
+	--rouge-stampy: rgb(255, 62, 62);
+	--rouge-stampy-hover: rgb(182, 30, 30);
+
+	--bleu-separation: #bac1c7;
+	--tres-pale:rgb(184, 212, 255);
 
 
     --font-alice: "Alice", serif;
     --font-unica-one: "Unica One", sans-serif;
     --font-limelight: "Limelight", sans-serif;
 
+
     --front-top: 50px;
     --font-titre: 30px;
+	--font-nav: 25px;
     --size-texte: 20px;
 }
 
+
+@keyframes montre { /* animation: var(--anim-type, montre) 1s ease forwards; */
+	0% {
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	25% {
+		border-top-color: var(--noir-leger);
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	50% {
+		border-top-color: var(--noir-leger);
+		border-right-color: var(--noir-leger);
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	75% {
+		border-top-color: var(--noir-leger);
+		border-right-color: var(--noir-leger);
+		border-bottom-color: var(--noir-leger);
+		border-left-color: transparent;
+	}
+	100% {
+		border-top-color: var(--noir-leger);
+		border-right-color: var(--noir-leger);
+		border-bottom-color: var(--noir-leger);
+		border-left-color: var(--noir-leger);
+	}
+}
+
+@keyframes cache {
+	0% {
+		border-top-color: var(--noir-leger);
+		border-right-color: var(--noir-leger);
+		border-bottom-color: var(--noir-leger);
+		border-left-color: var(--noir-leger);
+	}
+	25% {
+		border-top-color: var(--noir-leger);
+		border-right-color: var(--noir-leger);
+		border-bottom-color: var(--noir-leger);
+		border-left-color: transparent;
+	}
+	50% {
+		border-top-color: var(--noir-leger);
+		border-right-color: var(--noir-leger);
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	75% {
+		border-top-color: var(--noir-leger);
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+	100% {
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+}

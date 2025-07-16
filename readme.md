@@ -1,36 +1,29 @@
-Pour les explications: https://github.com/SenselessMap/LordStampy/tree/master
+# Remise
 
-# Depuis la première remise
+Je propose au Lord Stampee un site moderne et spacieux mettant en valeur les enchères et les initiatives que l'organisme du Lord avec les conférences et enchères à travers le monde. 
 
-J'ai découvert un énorme devis qui explique pourquoi ma maquette était aussi vide. J'ai également réalisé que Lord Stampy n'aime pas le allignement erratique et la composition brisé. J'ai ainsi retiré le code du css qui faisait en sorte que les timbres avaient des hauteurs et margin différents. 
+- L'utilisateur peut accéder aux plus récentes collections et nouvelles facilement
+- Les timbres vedettes et enchères en cours sont facilement accessible
+- La mission de l'organisme et le Lord sont clairement visible.
+- L'utilisateur peut filtrer les timbre selon leur prix ou collection.
+- Les timbres affichent les informations sur leurs histoires, relie leurs collection facilement et permet de miser facilement. 
 
-Ainsi, avant de commencer cette partie je dois:
-- Filtre FONCTIONNEL. J'en avait mis qui ne fonctionnaient pas, car je pensais que Lord Stampy ne voulais pas de javascript ✅
-- Zoom quand on click sur un timbre ✅
-- Bouton pour miser (Dans ce TP, cliquer dessus va rediriger vers le timbre.)✅
-- Distinction entre les enchères actives et finies 
-- Mobile ✅
+# Les défis
 
+Plusieurs problèmes sont survenu durant le travail. Lire les devis ont été mes plus gros problèmes. J'allais dans une mauvaise direction autant visuellement que pour les fonctionalité du site. J'avais oublié que le site doit sembler réel. Après avoir visité plusieurs site, on aurait dit que j'avais tout jetté par la fenêtre et crééer un visuel à mon goût et non celui du client ou des utilisateur.
 
-À rajouter pour la classe/objet timbre (✅ = déjà fait)
-- Nom ✅
-- Date de création ✅
-- Couleur(s)✅
-- Pays d’origine ✅
-- Images ✅
-- Image principale ✅
-- Images supplémentaires 
-- Condition (parfaite/excelente/bonne/endommagé) ✅
-- Tirage ✅
-- Dimensions ✅
-- Certifié (fait selon les filtre)
+J'ai pris 5 jours sans arrêt afin de remettre un site qui respecte les demande de Stampee tout en ayant l'apparance d'un vrai site. Des détails qui avaient été listés dans le devis scholaires ont également été rajouté, car je ne les avais pas vu. (Par exemple, le footer, les pages secondaires)
 
+L'identité visuelle du site est retournée aux intérêt du client avec un bleu et rouge qui contrastent bien ensembles.
 
-À rajouter pour la classe/objet "enchère" 
-- Période d’activité (Date de début et Date de fin) ✅
-- Prix plancher ✅
-- Offre actuelle ✅
-- Prix (valeur) ✅
-- Nom du membre ✅
-- Quantité de mises ✅
-- Coups de cœur du Lord ✅
+# Note
+
+- Utiliser avec Xampp
+- https://github.com/SenselessMap/LordStampy/tree/master
+- Les images de validation sont dans assets\devis
+
+# Sources pour les images
+- Smithonian: https://www.si.edu
+- Goppion.com: https://www.goppion.com/projects/national-postal-museum
+- Musée de la civilisation (ottawa): https://www.historymuseum.ca
+- Musée de la civbilisation (québec): https://mcq.org/en/

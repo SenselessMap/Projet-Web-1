@@ -1,0 +1,91 @@
+/**
+    CSS du caroussel dans index.html (acceuil) et timbre1
+*/
+
+.caroussel_timbre {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--bleu-separation);
+    max-width: 452px;
+    margin-right: 10px;
+    min-height: 100%;
+}
+
+.caroussel_timbre_image, .caroussel_timbre_image_selectione {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    padding:10px;
+}
+
+.caroussel_timbre_image:hover {
+    background-color: var(--blanc-gris);
+}
+
+.caroussel_timbre_image_selectione {
+    background-color: var(--blanc-gris);
+}
+
+.caroussel_plus {
+    justify-content: center;
+    /*margin-left: 170px;*/
+}
+
+.colonne_plus {
+    align-items: center;
+}
+
+.acceuil_caroussel {
+	background-image: url('/assets/img/timbres/8.jpg');
+	background-size: cover;
+	background-position: center;
+    width: 65%;
+    height: 400px;
+    margin: 50px auto 50px auto;
+}
+
+.acceuil_caroussel {
+	display: grid;
+}
+
+.acceuil_caroussel img,
+.acceuil_caroussel_texte {
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.acceuil_caroussel_texte {
+	color: black;
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.884);
+    padding: 50px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.acceuil_caroussel_texte h1 , .acceuil_caroussel_texte p , .acceuil_caroussel_texte h4 {
+    margin: 0;
+}
+
+.acceuil_caroussel_texte h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.acceuil_caroussel_texte h4 {
+    color: rgb(82, 82, 82);
+    font-weight: normal;
+}
+
+.acceuil_caroussel_texte p  {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
+.progression {
+    justify-content: flex-end;
+    font-weight: bold;
+}

@@ -1,0 +1,33 @@
+.accordion-wrapper {
+	width: 880px;
+	height: 500px;
+	border: 1px solid var(--blanc-gris);
+	overflow-y: auto;
+}
+
+.accordion-item {
+	margin-bottom: 5px;
+}
+
+.accordion-header {
+	background: var(--bleu-stampy-pale);
+	padding: 10px;
+	cursor: pointer;
+	user-select: none;
+	transition-duration: 0.1s;
+}
+
+.accordion-header:hover {
+	background: var(--bleu-stampy);
+	color: white;
+}
+
+.accordion-content {
+	display: none;
+	padding: 10px;
+	/*background: #fafafa;*/
+}
+
+.accordion-item.active .accordion-content {
+	display: block;
+}

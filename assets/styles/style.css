@@ -1,8 +1,13 @@
-@import url("sub/variable.css");
-@import url("sub/main.css");
+@import url("sub/variable.css"); /* Data */
+@import url("sub/main.css"); /* Ajustement */
 
-@import url("sub/header.css");
-@import url("sub/nav.css");
-@import url("sub/footer.css");
-@import url("sub/catalog.css");
-@import url("sub/collection.css");
+@import url("sub/nav.css"); /* navigation */
+@import url("sub/enchere.css"); /* Echere */
+@import url("sub/caroussel.css"); /* dans index et timbre1.html */
+@import url("sub/accordeon.css");
+@import url("sub/nouvelle.css");
+@import url("sub/presentation.css");
+@import url("sub/recherche.css");
+@import url("sub/timbre.css"); /* footer */
+@import url("sub/footer.css"); /* footer */
+

@@ -1,0 +1,103 @@
+/* CSS des nouvelles (comme popup, incitation à visiter d'autres pages et nouvelles) */
+
+.annonce, .miser {
+    border-radius: 5px;
+    border: 1px solid var(--blanc-gris);
+    width: 602px;
+    margin-right: 40px;
+}
+
+h6 {
+    font-size: 25px;
+    color:var(--bleu-stampy);
+    cursor:default;
+}
+
+.miser {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px 30px 30px 30px;
+}
+
+.annonce {
+    width: 652px;
+    background-color: rgb(243, 233, 214);
+    padding: 15px;
+}
+
+.miser h6 {
+    font-size: 25px;
+    text-wrap: wrap;
+}
+
+.annonce p, .miser p {
+    font-size: 20px;
+    color: rgb(46, 46, 46);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right {
+    text-align: end;
+}
+
+.btn_miser {
+    background-color: var(--rouge-stampy);
+    color: white;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    margin-bottom: 20px;
+}
+
+.btn_miser:hover {
+    text-decoration: underline;
+    background-color: var(--rouge-stampy-hover);
+}
+
+.miser img {
+    height: 100%; width: auto;
+}
+
+.date h5 {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.date {
+    color: rgb(126, 126, 126);
+    justify-content: space-between;
+    width: 90%;
+}
+
+.top-banner {
+    background-color: var(--rouge-stampy);
+    margin-top: 0;
+    padding: 2px 10px 2px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.top-banner p {
+    margin: 0;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.top-banner:hover {
+    background-color: var(--rouge-stampy);
+}
+
+.top-banner:hover p {
+    text-decoration: underline;
+}

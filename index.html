@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Acceuil</title>
+        <title>Stampee Co</title>
         <link rel="stylesheet" href="assets/styles/style.css">
-        <script src="assets/js/javascriptManager.js" type="module" defer></script>
+        <script src="assets/js/javascriptManager.js" type="module"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,34 +15,191 @@
     </head>
     <body>
         <div id="topBanner" class="top-banner">
-            <p>J'ai corrigé une grande partie de la partie 1. Le lien github a une grande explication du travail.</p>
-            <button id="closeBannerBtn" aria-label="Close banner">×</button>
+            <a href="assets/html/timbre1.html"><p>Enchère en cours pour le timbre Jaques Cartier!</p></a>
         </div>
         <header>
-            <nav class="nav">
-                <input type="checkbox" id="nav-toggle" class="burger-checkbox" />
+            <nav class="nav flex_row">
+                <input type="checkbox" id="nav-toggle" class="burger-checkbox">
                 <label for="nav-toggle" class="burger mobile" aria-label="Toggle menu">☰</label>
-
-                <ul class="nav-liens desktop">
-                    <li class="nav-item desktop"><a href="assets/html/timbre1.html">Modèle de Timbre</a></li>
-                    <li class="nav-item dropdown desktop">
-                        <a href="#" class="dropdown-toggle">Collections <span class="dropdown-fleche">▾</span></a>
+                <ul class="nav-liens desktop flex_row">
+                    <li><a href="#">Accueil</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="./assets/html/enchere.html">Enchère <span class="dropdown-fleche">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-menu-item"><a href="assets/html/histoire.html">Histoire du Québec</a></li>
-                            <li class="dropdown-menu-item"><a href="#">Collection Lord Stampy</a></li>
+                            <li><a href="/assets/html/enchere.html">Toutes les enchères</a></li>
+                            <li><a href="./assets/html/enchere.html">Futures enchères</a></li>
+                            <li><a href="./assets/html/enchere.html">Histoire du Québec</a></li>
+                            <li><a href="./assets/html/enchere.html">Timbre de l'Est</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item desktop"><a href="#">Nouveautés</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="./assets/html/enchere.html">Membre <span class="dropdown-fleche">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Inscriptions</a></li>
+                            <li><a href="#">Expositions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="./assets/html/enchere.html">Éducation <span class="dropdown-fleche">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Initiative "Collection de demain"</a></li>
+                            <li><a href="#">Présentations 2025</a></li>
+                            <li><a href="#">Présentations 2026</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
-                <ul class="nav-liens mobile">
-                    <li class="nav-item mobile"><a href="assets/html/timbre1.html">Modèle de Timbre</a></li>
-                    <li class="dropdown-menu-item mobile"><a href="assets/html/histoire.html">Histoire du Québec</a></li>
-                    <li class="dropdown-menu-item mobile"><a href="assets/html/stampy.html">Collection Lord Stampy</a></li>
+                <ul class="nav-right flex_row">
+                    <li class="nav-item"><a href="#">Connexion</a></li>
+                    <li class="nav-item"><a href="#">Créer un compte</a></li>
                 </ul>
             </nav>
         </header>
-        <main></main>
-
-        <footer></footer>
+        <main>
+            <section class="flex_col flex_centered couleur">
+                <img src="assets/img/logo.png" alt="logo de Stampee">
+                <h3 class="a">Le Lord</h3>
+                <p>Lord Reginald Stampee de Worcessteshear est un gentilhomme collectionneur. Étant né en 1940 il a toujours eu une fascination pour l'histoire et les musées. Il possède plusieurs collections dont une naquit de son intérêt récent pour les timbres. Après avoir mis aux enchères des momies et artéfact d'autres continents, il s'intéresse désormais à la riche histoire des timbres ayant lié des villes et pays.</p>
+            </section>
+            <section class="acceuil_caroussel flex_row"><!-- Nouveauté -->
+                <section class="acceuil_caroussel_texte flex_col">
+                    <h1>Nouvelle collection!</h1>
+                    <p>Venez découvrir l'histoire du Québec à travers les lettres et timbres Québecois des années 1600 jusqu'aux années 2000.</p>
+                    <a href="assets/html/enchere.html"><h4 class="right">Plus...</h4></a>
+                    <p class="progression"> ○ ○ ● ○ ○ </p>
+                </section>
+            </section>
+            <section class="flex_row fin">
+                <section class="flex_col">
+                    <section class="flex_row"><h2>Offres vedette</h2></section>
+                    <hr class="separation">
+                    <section class="flex_row flex_centered second">
+                        <article class="grille_timbre plus_grand">
+                            <img src="assets/img/timbres/6.jpg" alt="Timbre rare de la reine" class="grille_image">
+                            <h4>Elizabeth II 1950</h4>
+                            <div class="flex_col flex_centered">
+                                <h5>$1579 CAD</h5><a href="assets/html/timbre1.html"><p>Voir</p></a>
+                            </div>
+                        </article>
+                        <article class="grille_timbre plus_grand">
+                            <img src="assets/img/timbres/7.jpg" alt="Timbre rare de 1920" class="grille_image">
+                            <h4>Lettre de cancellation</h4>
+                            <div class="flex_col flex_centered">
+                                <h5>$1153 CAD</h5><a href="assets/html/timbre1.html"><p>Voir</p></a>
+                            </div>
+                        </article>
+                        <article class="grille_timbre plus_grand">
+                            <img src="assets/img/timbres/3.jpg" alt="Timbre rare de 1920" class="grille_image">
+                            <h4>Traites des fourrures</h4>
+                            <div class="flex_col flex_centered">
+                                <h5>$1259 CAD</h5><a href="assets/html/timbre1.html"><p>Voir</p></a>
+                            </div>
+                        </article>
+                        <article class="grille_timbre plus_grand">
+                            <img src="assets/img/timbres/8.jpg" alt="Timbre rare de 1920" class="grille_image">
+                            <h4>La Chasse-galerie 1880</h4>
+                            <div class="flex_col flex_centered">
+                                <h5>$651 CAD</h5><a href="assets/html/timbre1.html"><p>Voir</p></a>
+                            </div>
+                        </article>
+                    </section>
+                </section>
+                <section class="flex_col">
+                    <section class="flex_row"><h2>Offres en cours</h2></section>
+                    <hr class="separation">
+                    <section class="flex_row flex_centered second">
+                        <article class="grille_timbre plus_grand">
+                            <img src="assets/img/timbres/1.jpg" alt="Timbre rare de Jaques Cartiers" class="grille_image">
+                            <h4>Timbre Jaques Cartier</h4>
+                            <div class="flex_col flex_centered">
+                                <h5>$204 CAD</h5><a class="alerte" href="assets/html/timbre1.html"><p>Miser</p></a>
+                            </div>
+                        </article>
+                    </section>
+                </section><!-- col -->
+            </section><!-- Row -->
+            <section class="flex_col couleur">
+                <h4 class="a">Notre mission</h4>
+                <p>Permettre l'échange et le partage de la richesse historique des timbres du monde. Offrir aux passionnés une plateforme d’enchères accessible et conviviale pour enrichir leurs collections. Célébrer l’art et l’histoire à travers chaque timbre.</p><br>
+                <h4 class="a">Initiative "Collection de demain"</h4>
+                <p>Nous collaborons étroitement avec des musées renommés pour préserver et valoriser l’histoire des timbres. Par des expositions et des ressources pédagogiques, nous partageons la richesse culturelle des collections avec passion et rigueur. Ainsi nous passons dans les écoles pour donner des présentation sur l'histoire, permettant aux élèves d'étudier de proche des artéfactes importants.</p>
+                <br>
+                <hr>
+                <br>
+                <h4 class="centre">Nos prochaines visites éducatives</h4>
+                <br>
+                <section class="flex_row ajustement">
+                    <article class="actualite">
+                        <img src="assets/img/expo2.jpg" alt="Visite" class="actualite_image">
+                        <h2>Montréal</h2>
+                        <p>Musée McCord Stewart</p>
+                        <p>20 septembre 2025</p>
+                    </article>
+                    <div class="vr"></div>
+                    <article class="actualite">
+                        <img src="assets/img/expo1.jpg" alt="Visite" class="actualite_image">
+                        <h2>Washington, États-Unis</h2>
+                        <p>National Postal Museum</p>
+                        <p>2 septembre 2025</p>
+                    </article>
+                    <div class="vr"></div>
+                    <article class="actualite">
+                        <img src="assets/img/fond.jpg" alt="Visite" class="actualite_image">
+                        <h2>Chateau Borély</h2>
+                        <p>Musée des Arts Décoratifs, de la Faiënce et de la Mode</p>
+                        <p>30 septembre 2025</p>
+                    </article>
+                </section>
+            </section>
+        </main>
+        <footer class="ajustement_footer">
+            <section class="footer_top">
+                <div class="flex_row">
+                    <div class="flex_col">
+                        <a href="#"><h3>Acceuil</h3></a>
+                        <a href="./assets/html/enchere.html"><h3>Enchères</h3></a>
+                    </div>
+                    <div class="flex_col">
+                        <h3 class="footer_section">Collections</h3>
+                        <a href="./assets/html/enchere.html"><h3>Histoire du Québec</h3></a>
+                        <a href="./assets/html/enchere.html"><h3>Collection Stampy</h3></a>
+                        <a href="./assets/html/enchere.html"><h3>Timbre de l'Est</h3></a>
+                    </div>
+                    <div class="flex_col">
+                        <h3 class="footer_section">Membre</h3>
+                        <a href="#"><h3>Inscription</h3></a>
+                        <a href="#"><h3>Expositions</h3></a>
+                    </div>
+                    <div class="flex_col">
+                        <h3 class="footer_section">Autre</h3>
+                        <a href="#"><h3>Créer un compte</h3></a>
+                        <a href="#"><h3>Se connecter</h3></a>
+                        <a href="#"><h3>Nous contacter</h3></a>
+                    </div>
+                    <div class="flex_col">
+                        <a href="#"><h3>Besoin d'aide?</h3></a>
+                    </div>
+                    <div class="flex_col">
+                        <h4>Recherchez par nom:</h4>
+                        <form class="recherche" method="get" action="send">
+                            <input type="text" class="recherche__input" name="s" placeholder="Rechercher...">
+                            <button type="submit" class="recherche_image">
+                                <img src="https://s2.svgbox.net/hero-outline.svg?ic=search&amp;color=000" width="20" height="20" alt="Rechercher">
+                            </button>
+                        </form>
+                        <div class="socials flex_row">
+                            <i class="fa-solid fa-rss"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="legal">
+                <a><h6>Conditions d'utilisation</h6></a>
+                <a><h6>@Stampee Co. 2025</h6></a>
+            </section>
+        </footer>
     </body>
 </html>

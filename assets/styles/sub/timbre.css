@@ -1,0 +1,108 @@
+/* Affichage du timbre dans le catalogue (catalogue.html, enchere.html) et la sélection (timbre1.html) */
+
+.presentation {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.presentation #countdown {
+    font-size: 22px;
+}
+
+.detail_image {
+	height: 500px;
+	width: 380px;
+	object-fit: contain; 
+}
+
+/*============================ Timbre en grille ============================ */
+
+.grille_timbre {
+    width: 220px;
+    height: 380px;
+    border-radius: 5px;
+    border: 1px solid var(--blanc-gris);
+    padding: 15px 10px 15px 10px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grille_image {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+h4 {
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+h4:hover {
+    text-decoration: underline;
+}
+
+h5 {
+    cursor: default;
+    margin: 0 0 15px 0;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.grille_timbre p {
+    cursor:pointer;
+    margin: 0px
+}
+
+.grille_timbre a {
+    cursor:pointer;
+    margin:0;
+    font-size: 17px;
+    background-color: var(--bleu-stampy-pale);
+    width: 100%;
+    padding: 5px 2px 5px 2px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.grille_timbre a:hover {
+    text-decoration: underline;
+    color:white;
+    background-color: var(--bleu-stampy);
+}
+
+.plus_grand {
+    width: 275px;
+    height: 425px;
+}
+
+.plus_grand h4 {
+    font-size: 20px;
+}
+
+.indisponible img {
+    opacity: 0.5;
+}
+.indisponible h4 {
+    opacity: 0.5;
+}
+.indisponible .flex_col h5 {
+    opacity: 0.5;
+}
+
+.indisponible .flex_col a {
+    color: white;
+    background-color: red;
+    opacity: 1;
+}

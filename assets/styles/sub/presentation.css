@@ -1,0 +1,94 @@
+.couleur {
+    background-color: black;
+    padding: 100px;
+    margin: 0px 0 0px 0;
+}
+
+.second {
+    margin-bottom: 50px;
+}
+
+.couleur > h3 {
+    margin: 50px 0 30px 0;
+    color: white;
+    font-size: 30px;
+    font-family: var(--font-limelight);
+}
+
+.couleur > h4 {
+    cursor: default;
+    color: white;
+    font-size: 35px;
+    align-items: flex-start;
+    font-weight: lighter;
+    font-family: var(--font-alice);
+}
+
+.couleur > h4:hover {
+    text-decoration: none;
+}
+
+.couleur  > p, .actualite > h1, .actualite > p {
+    color: white;
+    font-size: 25px;
+    font-family: var(--font-alice);
+    font-weight: normal;
+    line-height: 3rem;
+}
+
+.couleur > br {
+    height: 80px;
+    display: block;
+    content: "";
+}
+
+.fin {
+    justify-content: space-evenly;
+}
+
+hr {
+    border: 1px solid rgb(255 255 255 / 50%);
+}
+
+.actualite {
+    padding: 10px 0;
+    background-image: linear-gradient(white, white);
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: background-size 0.2s ease;
+    cursor: pointer;
+}
+
+.actualite:hover {
+    background-size: 100% 2px;
+}
+
+
+.actualite > img {
+    height: 300px;
+    width: 450px;
+    object-fit: cover;
+}
+
+.actualite > h2 {
+    font-size: 30px;
+    color: white;
+    font-family: var(--font-alice);
+    text-align: center;
+}
+
+.actualite > p {
+    font-size: 20px;
+}
+
+.centre {
+    text-align: center;
+}
+
+.vr {
+	width: 1px;
+	height: 500px;
+	background-color: white;
+	margin: 0 10px;
+}
