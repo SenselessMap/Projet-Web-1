@@ -1,4 +1,11 @@
-# Sprint 1
+# Sprint 1.5
+
+- Changer le html css js vers PHP et modèle MVC (3h)
+
+# Liens
+
+- Trello: https://trello.com/b/0WuMiQSv/projet-web-1-e1640340
+- Webdev: 
 
 # Generation de la bdd 
 
