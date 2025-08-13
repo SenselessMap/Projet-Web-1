@@ -2,9 +2,23 @@
     CSS de base pour ajuster les différences entre les navigateurs. Il se peut que le css déclaré dans main.css soit recéclarer plus tard dans les autres fichiers. Les header sont aussi la
 */
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 body {
     /*background-color: var(--blanc-gris);*/
-    height: 100%;
     font-family: Arial, sans-serif;
 }
 

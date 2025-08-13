@@ -1,29 +1,54 @@
-# Remise
+# Sprint 1
 
-Je propose au Lord Stampee un site moderne et spacieux mettant en valeur les enchères et les initiatives que l'organisme du Lord avec les conférences et enchères à travers le monde. 
+# Generation de la bdd 
 
-- L'utilisateur peut accéder aux plus récentes collections et nouvelles facilement
-- Les timbres vedettes et enchères en cours sont facilement accessible
-- La mission de l'organisme et le Lord sont clairement visible.
-- L'utilisateur peut filtrer les timbre selon leur prix ou collection.
-- Les timbres affichent les informations sur leurs histoires, relie leurs collection facilement et permet de miser facilement. 
+CREATE TABLE User (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    profile_picture VARCHAR(255),
+    profile_description TEXT
+);
 
-# Les défis
+CREATE TABLE Stamp (
+    stamp_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,                  -- depuis le sprint 0 jai rajout/ ca
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    starting_price DECIMAL(10,2) NOT NULL,
+    `condition` VARCHAR(100),
+    dimensions VARCHAR(100),
+    country_of_origin VARCHAR(100),
+    colours VARCHAR(255),
+    is_certified BOOLEAN DEFAULT FALSE,
+    collection VARCHAR(100),
+    image_url VARCHAR(255), 
+    CONSTRAINT fk_stamp_user FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE
+);
 
-Plusieurs problèmes sont survenu durant le travail. Lire les devis ont été mes plus gros problèmes. J'allais dans une mauvaise direction autant visuellement que pour les fonctionalité du site. J'avais oublié que le site doit sembler réel. Après avoir visité plusieurs site, on aurait dit que j'avais tout jetté par la fenêtre et crééer un visuel à mon goût et non celui du client ou des utilisateur.
+CREATE TABLE Auction (
+    auction_id INT AUTO_INCREMENT PRIMARY KEY,
+    stamp_id INT NOT NULL,
+    start_date DATETIME NOT NULL,
+    end_date DATETIME NOT NULL,
+    status VARCHAR(50),
+    CONSTRAINT fk_auction_stamp FOREIGN KEY (stamp_id) REFERENCES Stamp(stamp_id) ON DELETE CASCADE
+);
 
-J'ai pris 5 jours sans arrêt afin de remettre un site qui respecte les demande de Stampee tout en ayant l'apparance d'un vrai site. Des détails qui avaient été listés dans le devis scholaires ont également été rajouté, car je ne les avais pas vu. (Par exemple, le footer, les pages secondaires)
+CREATE TABLE Bid (
+    bid_id INT AUTO_INCREMENT PRIMARY KEY,
+    auction_id INT NOT NULL,
+    user_id INT NOT NULL,
+    bid_amount DECIMAL(10,2) NOT NULL,
+    bid_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_bid_auction FOREIGN KEY (auction_id) REFERENCES Auction(auction_id) ON DELETE CASCADE,
+    CONSTRAINT fk_bid_user FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE
+);
 
-L'identité visuelle du site est retournée aux intérêt du client avec un bleu et rouge qui contrastent bien ensembles.
-
-# Note
-
-- Utiliser avec Xampp
-- https://github.com/SenselessMap/LordStampy/tree/master
-- Les images de validation sont dans assets\devis
-
-# Sources pour les images
-- Smithonian: https://www.si.edu
-- Goppion.com: https://www.goppion.com/projects/national-postal-museum
-- Musée de la civilisation (ottawa): https://www.historymuseum.ca
-- Musée de la civbilisation (québec): https://mcq.org/en/
+CREATE TABLE News (
+    news_id INT AUTO_INCREMENT PRIMARY KEY,
+    picture VARCHAR(255),
+    title VARCHAR(255) NOT NULL,
+    text TEXT NOT NULL
+);

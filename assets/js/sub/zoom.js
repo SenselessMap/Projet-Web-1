@@ -15,5 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		overlay.addEventListener("click", () => {
 		overlay.style.display = "none";
 		});
-	}
+	}w
 });
+
+
+document.addEventListener("beforeinput", console.log("test"));

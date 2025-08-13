@@ -15,47 +15,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     </head>
     <body>
-        <header>
-            <nav class="nav flex_row">
-                <input type="checkbox" id="nav-toggle" class="burger-checkbox">
-                <label for="nav-toggle" class="burger mobile" aria-label="Toggle menu">☰</label>
-                <ul class="nav-liens desktop flex_row">
-                    <li><a href="/index.html">Accueil</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="./enchere.html">Enchère <span class="dropdown-fleche">▾</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="./enchere.html">Toutes les enchères</a></li>
-                            <li><a href="./enchere.html">Futures enchères</a></li>
-                            <li><a href="./enchere.html">Histoire du Québec</a></li>
-                            <li><a href="./enchere.html">Timbre de l'Est</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="./enchere.html">Membre <span class="dropdown-fleche">▾</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Inscriptions</a></li>
-                            <li><a href="#">Expositions</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="./assets/html/enchere.html">Éducation <span class="dropdown-fleche">▾</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Initiative "Collection de demain"</a></li>
-                            <li><a href="#">Présentations 2025</a></li>
-                            <li><a href="#">Présentations 2026</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Actualités</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-
-                <!-- A droite -->
-                <ul class="nav-right flex_row">
-                    <li class="nav-item"><a href="#">Connexion</a></li>
-                    <li class="nav-item"><a href="#">Créer un compte</a></li>
-                </ul>
-            </nav>
-        </header>
+        <header id="nav-container"></header>
         <main>
             <section>
                 <ul class="breadcrumb flex_row">
@@ -165,54 +125,6 @@
                 </section>
             </section><!-- Row -->
         </main>
-        <footer>
-            <section class="footer_top">
-                <div class="flex_row">
-                    <div class="flex_col">
-                        <a href="/index.html"><h3>Acceuil</h3></a>
-                        <a href="./enchere.html"><h3>Enchères</h3></a>
-                    </div>
-                    <div class="flex_col">
-                        <h3 class="footer_section">Collections</h3>
-                        <a href="./enchere.html"><h3>Histoire du Québec</h3></a>
-                        <a href="./enchere.html"><h3>Collection Stampee</h3></a>
-                        <a href="./enchere.html"><h3>Timbre de l'Est</h3></a>
-                    </div>
-                    <div class="flex_col">
-                        <h3 class="footer_section">Membre</h3>
-                        <a href="#"><h3>Inscription</h3></a>
-                        <a href="#"><h3>Expositions</h3></a>
-                    </div>
-                    <div class="flex_col">
-                        <h3 class="footer_section">Autre</h3>
-                        <a href="#"><h3>Créer un compte</h3></a>
-                        <a href="#"><h3>Se connecter</h3></a>
-                        <a href="#"><h3>Nous contacter</h3></a>
-                    </div>
-                    <div class="flex_col">
-                        <a href="#"><h3>Besoin d'aide?</h3></a>
-                    </div>
-                    <div class="flex_col">
-                        <h4>Recherchez par nom:</h4>
-                        <form class="recherche" method="get" action="send">
-                            <input type="text" class="recherche__input" name="s" placeholder="Rechercher...">
-                            <button type="submit" class="recherche_image">
-                                <img src="https://s2.svgbox.net/hero-outline.svg?ic=search&amp;color=000" width="20" height="20" alt="Rechercher">
-                            </button>
-                        </form>
-                        <div class="socials flex_row">
-                            <i class="fa-solid fa-rss"></i>
-                            <i class="fa-brands fa-youtube"></i>
-                            <i class="fab fa-facebook-f"></i>
-                        </div>
-                    </div>
-                </div>
-            </section>
-                <!-- page secondaire specifique demandee dans le devis -->
-            <section class="legal">
-                <a><h6>Conditions d'utilisation</h6></a>
-                <a><h6>@Stampee Co. 2025</h6></a>
-            </section>
-        </footer>
+        <footer id="footer-container"></footer>
     </body>
 </html>
