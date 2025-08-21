@@ -1,9 +1,11 @@
 <?php
-// DB connection setup (adjust user/password/host if needed)
+session_start();
+//test@test.test et mot de passe est testtest
+// DB connection
 $host = 'localhost';
 $dbname = 'projet_web_1';
 $user = 'root';
-$pass = '';  // your DB password
+$pass = ''; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
@@ -12,27 +14,31 @@ try {
     die('Error connecting to DB: ' . $e->getMessage());
 }
 
-// Get POST data from form
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 
-// Basic validation
 if (!$email || !$password) {
-    die('Please fill both email and password.');
+    $_SESSION['login_error'] = 'Please fill both email and password.';
+    header('Location: ../../assets/html/connexion.php');
+    exit;
 }
 
-// Prepare and execute query to find user by email
 $stmt = $pdo->prepare('SELECT * FROM User WHERE email = ?');
 $stmt->execute([$email]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($user) {
-    if (password_verify($password, $user['password'])) { // pour le hashing ($password === $user['password'])
-        echo "Login successful! Welcome, " . htmlspecialchars($user['name']) . ".";
-    } else {
-        echo "Wrong password.";
-    }
+if ($user && password_verify($password, $user['password'])) {
+    // Login successful
+    $_SESSION['user'] = [
+        'user_id' => $user['user_id'],
+        'name' => $user['name'],
+        'email' => $user['email']
+    ];
+    header('Location: ../../index.php'); // redirect a acceuil
+    exit;
 } else {
-    echo "User not found.";
+    // Login failed
+    $_SESSION['login_error'] = 'Email or password incorrect.';
+    header('Location: ../../assets/html/connexion.php');
+    exit;
 }
-?>
