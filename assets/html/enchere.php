@@ -1,3 +1,40 @@
+<?php
+$host = 'localhost';
+$dbname = 'projet_web_1';
+$user = 'root';
+$pass = '';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (Exception $e) {
+    die('DB connection error: ' . $e->getMessage());
+}
+
+$sort = $_GET['sort'] ?? 'default';
+$orderBy = '';
+
+switch ($sort) {
+    case 'price_asc':
+        $orderBy = 'ORDER BY s.starting_price ASC';
+        break;
+    case 'price_desc':
+        $orderBy = 'ORDER BY s.starting_price DESC';
+        break;
+    default:
+        $orderBy = 'ORDER BY a.auction_id DESC'; 
+        break;
+}
+
+$stmt = $pdo->query("
+    SELECT a.auction_id, s.stamp_id, s.name, s.starting_price, s.image_url
+    FROM auction a
+    JOIN Stamp s ON a.stamp_id = s.stamp_id
+    $orderBy
+");
+$auctions = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -30,10 +67,10 @@
                     <h1>Parcourez nos timbres</h1>
                     <section class="flex_row">
                         <nav class="nav flex_row">
-                            <ul class="nav-liens desktop flex_row ajustement_recherche">
+                            <ul class="nav-liens desktop flex_row ajustement_recherche"><!--
                                 <li><a href="#" class="categorie">Histoire du Québec</a></li>
                                 <li><a href="#" class="categorie">Collection Stampee</a></li>
-                                <li><a href="#" class="categorie">Timbres de l'Est</a></li>
+                                <li><a href="#" class="categorie">Timbres de l'Est</a></li>--><!--
                                 <li class="nav-item dropdown">
                                     <a href="#">Disponibilité <span class="dropdown-fleche">▾</span></a>
                                     <ul class="dropdown-menu">
@@ -41,14 +78,13 @@
                                         <li><a href="#">Futur enchère</a></li>
                                         <li><a href="#">Enchère archivée</a></li>
                                     </ul>
-                                </li>
+                                </li>-->
+                                <li class="nav-item dropdown">
                                 <li class="nav-item dropdown">
                                     <a href="#">Prix <span class="dropdown-fleche">▾</span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">0 CAD - 150 CAD</a></li>
-                                        <li><a href="#">151 CAD - 500 CAD</a></li>
-                                        <li><a href="#">501 CAD - 1000 CAD</a></li>
-                                        <li><a href="#">+ 1000 CAD</a></li>
+                                        <li><a href="enchere.php?sort=price_asc">Moins cher au plus cher</a></li>
+                                        <li><a href="enchere.php?sort=price_desc">Plus cher au moins cher</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -62,14 +98,16 @@
                     </section>
                 </section>
             </section>
-            <section class="flex_row fin">
+            <section class="flex_row fin catalogue_collection">
                 <section class="flex_col">
-                    <section class="flex_row flex_centered second">
+                    <section class="flex_row flex_centered second ajustement">
                         <?php include __DIR__ . '/../view/collection.php'; ?>
                     </section>
                 </section>
-            </section><!-- Row -->
+            </section>
         </main>
-        <footer id="footer-container"></footer>
+        <footer id="footer-container">
+            <?php include __DIR__ . '/../view/footer.php'; ?> <?php //include __DIR__ . '/../view/footer.php'; ?>
+        </footer>
     </body>
 </html>
