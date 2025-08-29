@@ -1,6 +1,9 @@
 <?php
-require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../../config.php';
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $sort = $_GET['sort'] ?? 'default';
 $orderBy = '';
 
@@ -19,7 +22,7 @@ switch ($sort) {
 $stmt = $pdo->query("
     SELECT a.auction_id, s.stamp_id, s.name, s.starting_price, s.image_url
     FROM auction a
-    JOIN Stamp s ON a.stamp_id = s.stamp_id
+    JOIN stamp s ON a.stamp_id = s.stamp_id
     $orderBy
 ");
 $auctions = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -1,7 +1,7 @@
 <?php
 //session_start();
 $basePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__);
-$root = '/maquette2'; 
+$root = ''; 
 ?>
 <footer class="ajustement_footer">
     <section class="footer_top">

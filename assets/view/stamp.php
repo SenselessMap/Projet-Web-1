@@ -1,11 +1,11 @@
 <?php
-$root = '/maquette2'; 
-$stmtAuction = $pdo->prepare("SELECT auction_id FROM Auction WHERE stamp_id = ? AND status = 'En cours' ORDER BY start_date ASC LIMIT 1");
+$root = ''; 
+$stmtAuction = $pdo->prepare("SELECT auction_id FROM auction WHERE stamp_id = ? AND status = 'En cours' ORDER BY start_date ASC LIMIT 1");
 $stmtAuction->execute([$stamp['stamp_id']]);
 $auction = $stmtAuction->fetch(PDO::FETCH_ASSOC);
 
 if ($auction) {
-    $stmtBid = $pdo->prepare("SELECT MAX(bid_amount) as highest_bid FROM Bid WHERE auction_id = ?");
+    $stmtBid = $pdo->prepare("SELECT MAX(bid_amount) as highest_bid FROM bid WHERE auction_id = ?");
     $stmtBid->execute([$auction['auction_id']]);
     $bidRow = $stmtBid->fetch(PDO::FETCH_ASSOC);
     $displayPrice = $bidRow['highest_bid'] ?? $stamp['starting_price'];

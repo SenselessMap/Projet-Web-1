@@ -6,7 +6,7 @@ $orderBy = match($sort) {
     default      => 'stamp_id ASC',
 };
 
-$stmt = $pdo->query("SELECT * FROM Stamp ORDER BY $orderBy");
+$stmt = $pdo->query("SELECT * FROM stamp ORDER BY $orderBy");
 $stamps = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $counter = 0;

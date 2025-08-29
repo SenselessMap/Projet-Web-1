@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../../config.php';
 try {
     $stmt = $pdo->query("
         SELECT s.*
-        FROM Stamp s
-        JOIN Auction a ON s.stamp_id = a.stamp_id
+        FROM stamp s
+        JOIN auction a ON s.stamp_id = a.stamp_id
         WHERE a.status = 'En cours'
     ");
 

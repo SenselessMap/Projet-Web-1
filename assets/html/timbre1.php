@@ -1,16 +1,18 @@
 <?php
-require_once __DIR__ . '/../config.php';
-
+require_once __DIR__ . '/../../config.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 $stamp_id = isset($_GET['id']) ? (int)$_GET['id'] : 1;
 
-$stmt = $pdo->prepare('SELECT * FROM Stamp WHERE stamp_id = ?');
+$stmt = $pdo->prepare('SELECT * FROM stamp WHERE stamp_id = ?');
 $stmt->execute([$stamp_id]);
 $stamp = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$stamp) {
     die('Timbre introuvable.');
 }
-$stmt2 = $pdo->prepare("SELECT MAX(bid_amount) as current_bid FROM Bid WHERE auction_id = ?");
+$stmt2 = $pdo->prepare("SELECT MAX(bid_amount) as current_bid FROM bid WHERE auction_id = ?");
 $stmt2->execute([$stamp_id]);
 $currentBidRow = $stmt2->fetch(PDO::FETCH_ASSOC);
 $currentBid = $currentBidRow['current_bid'] ?? $stamp['starting_price'];
@@ -52,7 +54,7 @@ $currentBid = $currentBidRow['current_bid'] ?? $stamp['starting_price'];
                 <p id="countdown"></p>
 
                 <?php 
-                    $stmtAuction = $pdo->prepare("SELECT * FROM Auction WHERE stamp_id = ?");
+                    $stmtAuction = $pdo->prepare("SELECT * FROM auction WHERE stamp_id = ?");
                     $stmtAuction->execute([$stamp_id]);
                     $auction = $stmtAuction->fetch(PDO::FETCH_ASSOC);
                     if ($auction ?? false): ?>
@@ -174,7 +176,7 @@ $currentBid = $currentBidRow['current_bid'] ?? $stamp['starting_price'];
                                     <div class="accordion-content">
                                         <section class="information">
                                             <?php
-                                                $stmtAuction = $pdo->prepare("SELECT * FROM Auction WHERE stamp_id = ? AND status = 'En cours' ORDER BY start_date ASC LIMIT 1");
+                                                $stmtAuction = $pdo->prepare("SELECT * FROM auction WHERE stamp_id = ? AND status = 'En cours' ORDER BY start_date ASC LIMIT 1");
 
                                                 $stmtAuction->execute([$stamp_id]);
                                                 $auction = $stmtAuction->fetch(PDO::FETCH_ASSOC);
@@ -229,7 +231,7 @@ $currentBid = $currentBidRow['current_bid'] ?? $stamp['starting_price'];
                 <section class="flex_col colonne_plus">
 
                     <?php
-                    $stmtAuction = $pdo->prepare("SELECT * FROM Auction WHERE stamp_id = ?");
+                    $stmtAuction = $pdo->prepare("SELECT * FROM auction WHERE stamp_id = ?");
                     $stmtAuction->execute([$stamp_id]);
                     $auction = $stmtAuction->fetch(PDO::FETCH_ASSOC);
 
@@ -260,7 +262,7 @@ $currentBid = $currentBidRow['current_bid'] ?? $stamp['starting_price'];
                                 $bid_amount = (float)$_POST['bid_amount'];
 
                                 if ($bid_amount > $currentBid) {
-                                    $stmt = $pdo->prepare("INSERT INTO Bid (auction_id, user_id, bid_amount, bid_date) VALUES (:auction_id, :user_id, :bid_amount, NOW())");
+                                    $stmt = $pdo->prepare("INSERT INTO bid (auction_id, user_id, bid_amount, bid_date) VALUES (:auction_id, :user_id, :bid_amount, NOW())");
                                     $stmt->execute([
                                         ':auction_id' => $auction['auction_id'],
                                         ':user_id' => $user_id,

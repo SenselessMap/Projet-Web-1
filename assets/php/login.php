@@ -1,8 +1,21 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
+
+
 //test@test.test et mot de passe est testtest
 // DB connection
-require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../../config.php';
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
@@ -13,7 +26,7 @@ if (!$email || !$password) {
     exit;
 }
 
-$stmt = $pdo->prepare('SELECT * FROM User WHERE email = ?');
+$stmt = $pdo->prepare('SELECT * FROM user WHERE email = ?');
 $stmt->execute([$email]);
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 

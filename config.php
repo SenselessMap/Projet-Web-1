@@ -1,10 +1,10 @@
 <?php
 // config.php
 
-$host = "e1640340.infinityfreeapp.com";  
-$dbname = "if0_39451327_projetweb1";    
-$username = "if0_39451327";  
-$password = "superpizza1337?"; 
+$host = "sql111.infinityfree.com";    // MySQL hostname de InfinityFree pas mysql
+$dbname = "if0_39451327_projetweb1"; //  db name
+$username = "if0_39451327";          //  MySQL username
+$password = "IL4OVE5PIZ3ZA1";       //IL4OVE5PIZ3ZA1
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);

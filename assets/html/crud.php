@@ -1,5 +1,10 @@
 <?php
-    require_once __DIR__ . '/../config.php';
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+    require_once __DIR__ . '/../../config.php';
 ?>
 
 
@@ -25,15 +30,16 @@
             <?php
             if (!empty($_GET['id'])) {
                 $stampId = (int) $_GET['id'];
-                $stmt = $pdo->prepare("SELECT * FROM Stamp WHERE stamp_id = ?");
+                $stmt = $pdo->prepare("SELECT * FROM stamp WHERE stamp_id = ?");
                 $stmt->execute([$stampId]);
                 $stamp = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 if ($stamp) {
                     // modifie
-                    $collections = $pdo->query("SELECT id, name FROM Collection ORDER BY name ASC")->fetchAll(PDO::FETCH_ASSOC);
+                    $collections = $pdo->query("SELECT id, name FROM collection ORDER BY name ASC")->fetchAll(PDO::FETCH_ASSOC);
                     ?>
-                    <form id="create-stamp-form" method="POST" action="../assets/php/modifier.php" enctype="multipart/form-data">
+                    <form id="create-stamp-form" method="POST" action="/assets/php/modifier.php" enctype="multipart/form-data">
+
                         <input type="hidden" name="stamp_id" value="<?= $stamp['stamp_id'] ?>">
                         <label>Nom:
                             <input type="text" name="name" value="<?= htmlspecialchars($stamp['name']) ?>" required>
@@ -86,7 +92,7 @@
 
             } else {
                 // cree
-                $collections = $pdo->query("SELECT id, name FROM Collection ORDER BY name ASC")->fetchAll(PDO::FETCH_ASSOC);
+                $collections = $pdo->query("SELECT id, name FROM collection ORDER BY name ASC")->fetchAll(PDO::FETCH_ASSOC);
                 ?>
                 <form id="create-stamp-form" method="POST" action="crud.php" enctype="multipart/form-data">
                     <label>Nom:

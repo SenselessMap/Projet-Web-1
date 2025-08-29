@@ -1,8 +1,8 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=projet_web_1", "root", "");
+require_once __DIR__ . '/../../config.php';
 
-// (WHERE news_id = 1) ---
-$stmt = $pdo->query("SELECT * FROM News ORDER BY news_id DESC LIMIT 1");
+// Get latest news
+$stmt = $pdo->query("SELECT * FROM news ORDER BY news_id DESC LIMIT 1");
 $news = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($news):

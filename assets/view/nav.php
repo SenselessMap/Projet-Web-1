@@ -3,7 +3,7 @@ session_start();
 //nav.php
 //Va dependre de si on est connect/ ou non
 $basePath = str_replace($_SERVER['DOCUMENT_ROOT'], '', __DIR__);
-$root = '/maquette2'; // adjustement
+$root = ''; // adjustement
 ?>
 
 <nav class="nav flex_row">
