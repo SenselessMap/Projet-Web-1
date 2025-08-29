@@ -1,8 +1,6 @@
 <?php
+require_once __DIR__ . '/../config.php';
 try {
-    $pdo = new PDO("mysql:host=localhost;dbname=projet_web_1", "root", "");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     $stmt = $pdo->query("
         SELECT s.*
         FROM Stamp s
