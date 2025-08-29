@@ -1,8 +1,8 @@
-<?php
+<?php //assets\controller\stamp.php
 // assets/controller/stamp.php va aller vers index.php 
+require_once __DIR__ . '/../config.php';
+
 try {
-    $pdo = new PDO("mysql:host=localhost;dbname=projet_web_1", "root", "");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $pdo->query("SELECT * FROM Stamp");
     $allStamps = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

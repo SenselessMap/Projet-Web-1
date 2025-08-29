@@ -1,6 +1,5 @@
 <?php
-    $pdo = new PDO("mysql:host=localhost;dbname=projet_web_1", "root", "");
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    require_once __DIR__ . '/../config.php';
 ?>
 
 
@@ -21,73 +20,6 @@
     </head>
     <body>
         <header id="nav-container"><?php include __DIR__ . '/../view/nav.php'; ?></header><!-- session() -->
-
-        <?php
-            $pdo = new PDO("mysql:host=localhost;dbname=projet_web_1", "root", "");
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            // POST 
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                $stamp_id = $_POST['stamp_id'] ?? null;
-                $name = $_POST['name'];
-                $description = $_POST['description'];
-                $starting_price = $_POST['starting_price'];
-                $condition = $_POST['condition'] ?? null;
-                $dimensions = $_POST['dimensions'] ?? null;
-                $country_of_origin = $_POST['country_of_origin'] ?? null;
-                $colours = $_POST['colours'] ?? null;
-                $collection = $_POST['collection'] ?? null;
-                $is_certified = $_POST['is_certified'] ?? 0;
-                $user_id = $_SESSION['user']['user_id'];
-
-                $targetDir = __DIR__ . '/../img/timbres/';
-                    if ($stamp_id) {
-                        //  modifie
-                        $imageFile = $stamp_id . '.jpg';
-
-                        if (!empty($_FILES['image_url']['name'])) {
-                            move_uploaded_file($_FILES['image_url']['tmp_name'], $targetDir . $imageFile);
-                        } else {
-                            if (!file_exists($targetDir . $imageFile)) {
-                                copy(__DIR__ . '/../img/timbres/default.jpg', $targetDir . $imageFile);
-                            }
-                        }
-
-                        // Merge UPDATE 
-                        $stmt = $pdo->prepare("UPDATE Stamp SET 
-                            name=?, description=?, starting_price=?, `condition`=?, dimensions=?,
-                            country_of_origin=?, colours=?, is_certified=?, collection=?, image_url=?
-                            WHERE stamp_id=?");
-                        $stmt->execute([
-                            $name, $description, $starting_price, $condition, $dimensions,
-                            $country_of_origin, $colours, $is_certified, $collection, $imageFile, $stamp_id
-                        ]);
-                    } else {
-                    // create
-                    $stmt = $pdo->prepare("INSERT INTO Stamp 
-                        (user_id, name, description, starting_price, `condition`, dimensions, country_of_origin, colours, is_certified, collection)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                    $stmt->execute([$user_id, $name, $description, $starting_price, $condition, $dimensions,
-                        $country_of_origin, $colours, $is_certified, $collection]);
-                    $stamp_id = $pdo->lastInsertId();
-
-                    $imageFile = $stamp_id.'.jpg';
-                    if (!empty($_FILES['image_url']['name'])) {
-                        move_uploaded_file($_FILES['image_url']['tmp_name'], $targetDir.$imageFile);
-                    } else {
-                        copy(__DIR__ . '/../img/timbres/default.jpg', $targetDir.$imageFile);
-                    }
-
-                    // Update
-                    $stmt = $pdo->prepare("UPDATE Stamp SET image_url=? WHERE stamp_id=?");
-                    $stmt->execute([$imageFile, $stamp_id]);
-                }
-
-                header("Location: crud.php?success=1");
-                exit;
-            }
-        ?>
-
 
         <main>
             <?php

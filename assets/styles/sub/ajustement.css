@@ -73,6 +73,11 @@ button {
     min-width: 255px;
 }
 
-.ajustement {
+.ajustement{
     flex-direction: column;
+}
+
+.ajustement:has(.actualite) {
+    justify-content: space-around;
+    flex-direction: row;
 }

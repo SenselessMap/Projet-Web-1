@@ -2,17 +2,7 @@
 session_start();
 //test@test.test et mot de passe est testtest
 // DB connection
-$host = 'localhost';
-$dbname = 'projet_web_1';
-$user = 'root';
-$pass = ''; 
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $e) {
-    die('Error connecting to DB: ' . $e->getMessage());
-}
+require_once __DIR__ . '/../config.php';
 
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
