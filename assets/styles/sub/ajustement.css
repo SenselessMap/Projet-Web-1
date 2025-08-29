@@ -1,0 +1,78 @@
+.catalogue_collection .flex_row.second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.catalogue_collection .grille_timbre.plus_grand {
+    flex: 0 0 22%;
+    box-sizing: border-box;
+}
+
+.recherche {
+    flex-direction: row;
+    gap: 0;
+}
+
+button {
+    all: unset;
+    background-color: rgb(129, 174, 238);
+    cursor: pointer;
+}
+
+
+#create-stamp-form {
+    background-color: rgb(185, 213, 252);
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 400px;
+}
+
+#create-stamp-form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#create-stamp-form input,
+#create-stamp-form textarea,
+#create-stamp-form select,
+#create-stamp-form button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+#create-stamp-form {
+    background-color: rgb(185, 213, 252);
+    border-radius: 6px;
+    padding: 10px;
+    max-width: 400px;
+
+    margin: 50px auto;
+}
+
+#create-stamp-form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#create-stamp-form input,
+#create-stamp-form textarea,
+#create-stamp-form select,
+#create-stamp-form button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.catalogue_collection .grille_timbre.plus_grand {
+    min-width: 255px;
+}
+
+.ajustement {
+    flex-direction: column;
+}

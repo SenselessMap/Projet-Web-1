@@ -46,7 +46,7 @@ $root = '/maquette2'; // adjustement
 
     <ul class="nav-right flex_row">
         <?php if (!empty($_SESSION['user'])): ?>
-            <li class="nav-item"><a href="<?= $root ?>/assets/html/profile.php">Profil</a></li>
+            <li class="nav-item"><a href="<?= $root ?>/assets/html/crud.php">Nouveau Timbre</a></li>
             <li class="nav-item"><a href="<?= $root ?>/assets/php/logout.php">Déconnexion</a></li>
         <?php else: ?>
             <li class="nav-item"><a href="<?= $root ?>/assets/html/connexion.php">Connexion</a></li>

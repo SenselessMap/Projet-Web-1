@@ -32,6 +32,8 @@
                 </form>
             </section>
         </main>
-        <footer id="footer-container"></footer>
+        <footer id="footer-container">
+            <?php include __DIR__ . '/../view/footer.php'; ?> <?php //include __DIR__ . '/../view/footer.php'; ?>
+        </footer>
     </body>
 </html>
