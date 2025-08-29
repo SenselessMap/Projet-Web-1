@@ -1,4 +1,3 @@
-
 # Branche "RemiseFinale"
 - Est la version que je souhaites que vous corigiez, elle ne fonctionnera pas sur xamp (en locale) par contre. 
 - Ce qui fonctionne: Ajout, modification de timbres (images ou n'importe quel info). L'affichage dynamqiue des timbres et nouvelles selon la BDD en ligne (non-locale).
