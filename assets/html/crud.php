@@ -33,7 +33,7 @@
                     // modifie
                     $collections = $pdo->query("SELECT id, name FROM Collection ORDER BY name ASC")->fetchAll(PDO::FETCH_ASSOC);
                     ?>
-                    <form id="create-stamp-form" method="POST" action="crud.php" enctype="multipart/form-data">
+                    <form id="create-stamp-form" method="POST" action="../assets/php/modifier.php" enctype="multipart/form-data">
                         <input type="hidden" name="stamp_id" value="<?= $stamp['stamp_id'] ?>">
                         <label>Nom:
                             <input type="text" name="name" value="<?= htmlspecialchars($stamp['name']) ?>" required>
