@@ -1,19 +1,9 @@
 <?php
 
-$host = 'localhost'; //va changer pour webdev
-$dbname = 'projet_web_1';
-$user = 'root';
-$pass = '';
-
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Connection a la bdd a /chouee : " . $e->getMessage());
-}
+require_once __DIR__ . '/../config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Collect and sanitize inputs
+    // fixe le tout
     $name = trim($_POST['name'] ?? '');
     $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
@@ -22,14 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die('Tous les champs sont requis.');
     }
 
-    // Check if user exists
+    // Check si le user exist ici
     $stmt = $pdo->prepare("SELECT user_id FROM User WHERE email = ?");
     $stmt->execute([$email]);
     if ($stmt->fetch()) {
         die('Cet email est déjà utilisé.');
     }
 
-    // Hash the password securely
+    // Hash
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert new user
@@ -38,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($success) {
         echo "Inscription réussie ! Vous pouvez maintenant vous connecter.";
-        // You may redirect to login page or home here:
         // header("Location: ../html/connexion.html");
         // exit;
     } else {
